@@ -1,4 +1,6 @@
-const API_KEY = '5dd80060d41546e53c8c3e113de42a27';
+const API_KEY = '5dd80060d41546e53c8c3e113de42a27'; //Esta parte de aqui es la clave de la API
+
+// ELEMENTOS DEL DOM
 
 const btn = document.querySelector('#search-btn');
 const input = document.querySelector('#city-input');
@@ -23,6 +25,7 @@ const renderWeather = (data) => {
 
 // FUNCIÓN FETCH
 const getWeather = (city) => {
+    //consulta a la url con la api
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric&lang=es`;
 
     fetch(url)
